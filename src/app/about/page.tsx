@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -24,24 +25,15 @@ function AboutHero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* PLACEHOLDER: Replace with large professional portrait of Gillian */}
-          <div
-            className="relative aspect-[3/4] rounded-2xl overflow-hidden order-2 lg:order-1"
-            aria-label="Professional portrait of Gillian Vickers"
-          >
-            <div className="absolute inset-0 bg-gradient-to-b from-beige/60 to-sage/20" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-ivory/60 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-charcoal/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                  </svg>
-                </div>
-                <p className="text-charcoal/40 font-sans text-sm">
-                  Gillian&apos;s portrait photograph
-                </p>
-              </div>
-            </div>
+          <div className="relative aspect-[3/4] rounded-2xl overflow-hidden order-2 lg:order-1 shadow-elegant">
+            <Image
+              src="/images/gillian-vickers.webp"
+              alt="Gillian Vickers, professional electrologist and owner of Shenandoah Electrolysis"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
+            />
           </div>
 
           {/* Text */}

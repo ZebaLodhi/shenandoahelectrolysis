@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -57,25 +58,15 @@ function HeroSection() {
             </div>
           </div>
 
-          {/* PLACEHOLDER: Replace with professional hero photograph of Gillian or treatment-related image */}
-          <div
-            className="relative aspect-[4/5] lg:aspect-[3/4] rounded-2xl overflow-hidden"
-            aria-label="Professional photograph of Gillian Vickers or treatment-related imagery"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-sage/20 via-beige to-champagne/20" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center px-8">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-ivory/60 flex items-center justify-center">
-                  <svg className="w-8 h-8 text-charcoal/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z" />
-                  </svg>
-                </div>
-                <p className="text-charcoal/40 font-sans text-sm">
-                  Hero photograph
-                </p>
-              </div>
-            </div>
+          <div className="relative aspect-[4/5] lg:aspect-[3/4] rounded-2xl overflow-hidden shadow-elegant">
+            <Image
+              src="/images/gillian-vickers.webp"
+              alt="Gillian Vickers, professional electrologist and owner of Shenandoah Electrolysis"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              priority
+            />
           </div>
         </div>
       </div>
@@ -123,24 +114,14 @@ function MeetGillianSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Photo + Video */}
           <div className="space-y-6">
-            {/* PLACEHOLDER: Replace with professional portrait of Gillian */}
-            <div
-              className="relative aspect-[4/5] rounded-2xl overflow-hidden"
-              aria-label="Professional portrait of Gillian Vickers"
-            >
-              <div className="absolute inset-0 bg-gradient-to-b from-beige/60 to-sage/20" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-3 rounded-full bg-ivory/60 flex items-center justify-center">
-                    <svg className="w-7 h-7 text-charcoal/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                    </svg>
-                  </div>
-                  <p className="text-charcoal/40 font-sans text-sm">
-                    Gillian&apos;s portrait
-                  </p>
-                </div>
-              </div>
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-elegant">
+              <Image
+                src="/images/gillian-vickers.webp"
+                alt="Gillian Vickers, professional electrologist and owner of Shenandoah Electrolysis"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
 
             {/* PLACEHOLDER: Replace with Gillian's introductory video */}
