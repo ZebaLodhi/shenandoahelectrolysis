@@ -123,7 +123,7 @@ const services = [
       <svg viewBox="0 0 48 48" fill="none" className="w-10 h-10" aria-hidden="true">
         <rect x="8" y="8" width="32" height="32" rx="6" stroke="currentColor" strokeWidth="1.5" />
         <path d="M16 20h16M16 26h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-        <circle cx="34" cy="34" r="8" fill="#FDFBF7" stroke="currentColor" strokeWidth="1.5" />
+        <circle cx="34" cy="34" r="8" fill="#EAE9EE" stroke="currentColor" strokeWidth="1.5" />
         <path d="M34 30v4l3 2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     ),

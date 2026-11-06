@@ -8,7 +8,7 @@ html {
 
 body {
   color: #3A3330;
-  background-color: #FDFBF7;
+  background-color: #EAE9EE;
   font-family: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -165,7 +165,7 @@ img[data-loaded="true"] {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FDFBF7;
+  background: #EAE9EE;
 }
 
 ::-webkit-scrollbar-thumb {

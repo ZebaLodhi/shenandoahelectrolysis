@@ -2,9 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { NAV_LINKS, GLOSSGENIUS_BOOKING_URL, SITE_NAME } from "@/lib/constants";
+import { NAV_LINKS, GLOSSGENIUS_BOOKING_URL } from "@/lib/constants";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,14 +43,15 @@ export default function Navigation() {
         <div className="container-custom">
           <nav className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
-            <Link
-              href="/"
-              className={cn(
-                "font-serif text-lg sm:text-xl font-semibold tracking-tight transition-colors duration-300",
-                isScrolled || !isHome ? "text-charcoal" : "text-charcoal"
-              )}
-            >
-              {SITE_NAME}
+            <Link href="/" className="flex-shrink-0">
+              <Image
+                src="/images/logo.webp"
+                alt="Shenandoah Electrolysis"
+                width={200}
+                height={60}
+                className="h-10 sm:h-12 w-auto"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation */}

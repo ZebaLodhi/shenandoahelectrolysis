@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ivory: "#FDFBF7",
-        "ivory-dark": "#F5F0E8",
+        ivory: "#EAE9EE",
+        "ivory-dark": "#DDDCE2",
         beige: "#E8DFD0",
         "beige-dark": "#D4C8B5",
         sage: "#A3B5A0",
