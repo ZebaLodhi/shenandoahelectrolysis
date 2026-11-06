@@ -349,16 +349,19 @@ const videosPreviews = [
     title: "What Is Electrolysis?",
     description:
       "A clear, approachable overview of how electrolysis works and why it is the gold standard for permanent hair removal.",
+    youtubeId: "OkPKZIPf5MM",
   },
   {
     title: "Your First Appointment",
     description:
       "Everything you need to know before your first visit, from preparation tips to what happens during treatment.",
+    youtubeId: "quoq_YaXTYE",
   },
   {
     title: "Electrolysis vs. Laser",
     description:
       "Understand the key differences between electrolysis and laser hair removal so you can make the best choice for your goals.",
+    youtubeId: "yeSJihG4dx0",
   },
 ];
 
@@ -383,19 +386,27 @@ function EducationPreviewSection() {
         <div className="grid md:grid-cols-3 gap-8">
           {videosPreviews.map((v) => (
             <div key={v.title} className="group">
-              {/* PLACEHOLDER: Replace with actual video thumbnail */}
-              <div
-                className="relative aspect-video rounded-xl overflow-hidden mb-5 bg-gradient-to-br from-sage/10 to-beige/40"
-                aria-label={`Video thumbnail: ${v.title}`}
+              <a
+                href={`https://www.youtube.com/watch?v=${v.youtubeId}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative aspect-video rounded-xl overflow-hidden mb-5 block bg-charcoal"
               >
+                <img
+                  src={`https://img.youtube.com/vi/${v.youtubeId}/hqdefault.jpg`}
+                  alt={v.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-charcoal/20 group-hover:bg-charcoal/10 transition-colors duration-300" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-14 h-14 rounded-full bg-ivory/90 flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-5 h-5 text-charcoal ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform duration-300">
+                    <svg className="w-5 h-5 text-red-600 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
                 </div>
-              </div>
+              </a>
               <h3 className="font-serif text-lg text-charcoal mb-2">
                 {v.title}
               </h3>
