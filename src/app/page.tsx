@@ -108,25 +108,14 @@ function WelcomeSection() {
               your care here.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-soft">
-              <Image
-                src="/images/treatment-room.webp"
-                alt="Shenandoah Electrolysis treatment room with warm ambient lighting"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 50vw, 25vw"
-              />
-            </div>
-            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-soft mt-8">
-              <Image
-                src="/images/studio-collage.webp"
-                alt="Shenandoah Electrolysis studio — reception, treatment spaces, and welcoming interior"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 768px) 50vw, 25vw"
-              />
-            </div>
+          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-elegant">
+            <Image
+              src="/images/treatment-room.webp"
+              alt="Shenandoah Electrolysis treatment room with warm ambient lighting"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
         </div>
       </div>
