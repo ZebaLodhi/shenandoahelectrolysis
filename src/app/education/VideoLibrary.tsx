@@ -81,33 +81,6 @@ const videos: Video[] = [
     thumbnailUrl: "/images/video-vertical-2-poster.webp",
     duration: "1:17",
   },
-  {
-    id: "video-4",
-    title: "Before & After Your Treatment: Essential Care Tips",
-    description:
-      "Learn how to prepare your skin before electrolysis and the best aftercare practices for optimal healing and results.",
-    category: "Before & Aftercare",
-    // youtubeId: "YOUR_YOUTUBE_ID_HERE",
-    duration: "7:30",
-  },
-  {
-    id: "video-5",
-    title: "Electrolysis Myths Debunked",
-    description:
-      "From pain levels to permanence, Gillian addresses the most common misconceptions about electrolysis with facts and first-hand experience.",
-    category: "FAQs & Myths",
-    // youtubeId: "YOUR_YOUTUBE_ID_HERE",
-    duration: "9:18",
-  },
-  {
-    id: "video-6",
-    title: "Understanding Hair Growth Cycles",
-    description:
-      "Why does electrolysis require multiple sessions? Learn about the anagen, catagen, and telogen phases and how they affect your treatment plan.",
-    category: "Hair Growth Science",
-    // youtubeId: "YOUR_YOUTUBE_ID_HERE",
-    duration: "5:45",
-  },
 ];
 
 function PlayIcon({ className }: { className?: string }) {
