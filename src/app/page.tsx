@@ -80,25 +80,49 @@ function HeroSection() {
 function WelcomeSection() {
   return (
     <section className="py-section bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="w-16 h-px bg-champagne mx-auto mb-10" />
-        <h2 className="font-serif text-display-sm md:text-display-md text-charcoal mb-8">
-          Welcome to Shenandoah Electrolysis
-        </h2>
-        <p className="text-warm-gray font-sans text-lg leading-relaxed mb-6">
-          At Shenandoah Electrolysis, we believe that every person deserves to
-          feel confident and comfortable in their own skin. Our practice is built
-          on a simple philosophy: permanent results delivered with personalized
-          care, precision, and genuine compassion.
-        </p>
-        <p className="text-warm-gray font-sans text-lg leading-relaxed">
-          Electrolysis is the only FDA-recognized method of permanent hair
-          removal, and we are proud to offer this trusted treatment in a warm,
-          welcoming environment. Whether you are seeking relief from unwanted
-          facial hair, exploring your options for the first time, or continuing
-          your journey toward smoother skin, you will find a dedicated partner in
-          your care here.
-        </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <div className="w-16 h-px bg-champagne mb-10" />
+            <h2 className="font-serif text-display-sm md:text-display-md text-charcoal mb-8">
+              Welcome to Shenandoah Electrolysis
+            </h2>
+            <p className="text-warm-gray font-sans text-lg leading-relaxed mb-6">
+              At Shenandoah Electrolysis, we believe that every person deserves to
+              feel confident and comfortable in their own skin. Our practice is built
+              on a simple philosophy: permanent results delivered with personalized
+              care, precision, and genuine compassion.
+            </p>
+            <p className="text-warm-gray font-sans text-lg leading-relaxed">
+              Electrolysis is the only FDA-recognized method of permanent hair
+              removal, and we are proud to offer this trusted treatment in a warm,
+              welcoming environment. Whether you are seeking relief from unwanted
+              facial hair, exploring your options for the first time, or continuing
+              your journey toward smoother skin, you will find a dedicated partner in
+              your care here.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-soft">
+              <Image
+                src="/images/treatment-room.webp"
+                alt="Shenandoah Electrolysis treatment room with warm ambient lighting"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+            </div>
+            <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-soft mt-8">
+              <Image
+                src="/images/electrolysis-room.webp"
+                alt="Electrolysis treatment setup with professional equipment and natural light"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -124,21 +148,28 @@ function MeetGillianSection() {
               />
             </div>
 
-            {/* PLACEHOLDER: Replace with Gillian's introductory video */}
+            {/* Video intro — replace with YouTube/Vimeo embed once videos are uploaded */}
             <div
-              className="relative aspect-video rounded-xl overflow-hidden"
+              className="relative aspect-video rounded-xl overflow-hidden shadow-soft"
               aria-label="Introductory video from Gillian Vickers"
             >
-              <div className="absolute inset-0 bg-charcoal/10" />
+              <Image
+                src="/images/treatment-room.webp"
+                alt="Inside the Shenandoah Electrolysis treatment room"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-charcoal/20" />
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full bg-ivory/80 flex items-center justify-center shadow-soft cursor-pointer hover:scale-105 transition-transform">
+                <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-soft cursor-pointer hover:scale-105 transition-transform">
                   <svg className="w-6 h-6 text-charcoal ml-1" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>
               </div>
-              <p className="absolute bottom-4 left-4 text-charcoal/40 font-sans text-xs">
-                Video introduction placeholder
+              <p className="absolute bottom-4 left-4 text-white/80 font-sans text-xs">
+                Watch Gillian&apos;s introduction
               </p>
             </div>
           </div>

@@ -272,20 +272,28 @@ function VideoIntroSection() {
           </p>
         </div>
 
-        {/* PLACEHOLDER: Replace with Gillian's actual introductory video (YouTube/Vimeo embed or hosted video) */}
+        {/* Replace with YouTube/Vimeo embed once Gillian's videos are uploaded */}
         <div
-          className="relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-beige/40 to-sage/10"
+          className="relative aspect-video rounded-2xl overflow-hidden shadow-elegant"
           aria-label="Gillian Vickers introductory video"
         >
+          <Image
+            src="/images/studio-collage.webp"
+            alt="Inside Shenandoah Electrolysis — treatment rooms, reception, and studio spaces"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 896px"
+          />
+          <div className="absolute inset-0 bg-charcoal/30" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-ivory/80 flex items-center justify-center shadow-soft cursor-pointer hover:scale-105 transition-transform">
+              <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-white/90 flex items-center justify-center shadow-soft cursor-pointer hover:scale-105 transition-transform">
                 <svg className="w-8 h-8 text-charcoal ml-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
                 </svg>
               </div>
-              <p className="text-charcoal/40 font-sans text-sm">
-                Introductory video placeholder
+              <p className="text-white/80 font-sans text-sm">
+                Watch Gillian&apos;s introduction
               </p>
             </div>
           </div>

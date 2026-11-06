@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -135,9 +136,14 @@ export default function ServicesPage() {
     <main className="bg-ivory">
       {/* Hero */}
       <section className="relative bg-charcoal text-ivory overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-sage/30 to-champagne/20" />
-        </div>
+        <Image
+          src="/images/treatment-room.webp"
+          alt="Shenandoah Electrolysis treatment room"
+          fill
+          className="object-cover opacity-30"
+          sizes="100vw"
+          priority
+        />
         <div className="relative max-w-4xl mx-auto px-6 py-28 md:py-36 text-center">
           <p className="text-champagne font-sans text-sm tracking-[0.2em] uppercase mb-4">
             Shenandoah Electrolysis
