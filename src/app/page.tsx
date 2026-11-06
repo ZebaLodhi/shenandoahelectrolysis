@@ -21,7 +21,7 @@ import HeroVideo from "@/components/features/HeroVideo";
 
 function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-end overflow-hidden">
+    <section className="relative min-h-[70vh] md:min-h-screen flex items-end overflow-hidden">
       {/* Video background */}
       <HeroVideo />
 
@@ -29,7 +29,7 @@ function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/20 z-[1]" />
 
       {/* Content */}
-      <div className="relative z-10 w-full pb-16 sm:pb-20 lg:pb-28 pt-40">
+      <div className="relative z-10 w-full pb-10 sm:pb-20 lg:pb-28 pt-28 sm:pt-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-champagne font-sans text-xs sm:text-sm tracking-[0.25em] uppercase mb-5">
