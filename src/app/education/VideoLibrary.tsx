@@ -57,6 +57,7 @@ const videos: Video[] = [
       "Gillian introduces her practice and shares her passion for helping clients achieve permanent hair removal with personalized care.",
     category: "Electrolysis Explained",
     mp4Src: "/images/video-intro.mp4",
+    thumbnailUrl: "/images/video-intro-poster.webp",
     duration: "0:43",
     featured: true,
   },
@@ -67,6 +68,7 @@ const videos: Video[] = [
       "Take a look at Gillian's professional treatment environment and learn about the care and precision that goes into every electrolysis session.",
     category: "How It Works",
     mp4Src: "/images/video-vertical-1.mp4",
+    thumbnailUrl: "/images/video-vertical-1-poster.webp",
     duration: "1:21",
   },
   {
@@ -76,6 +78,7 @@ const videos: Video[] = [
       "Gillian walks you through what to expect during your electrolysis journey — from the initial consultation to your permanent results.",
     category: "Your First Appointment",
     mp4Src: "/images/video-vertical-2.mp4",
+    thumbnailUrl: "/images/video-vertical-2-poster.webp",
     duration: "1:17",
   },
   {
