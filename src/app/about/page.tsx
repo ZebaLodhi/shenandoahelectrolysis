@@ -276,8 +276,8 @@ function VideoIntroSection() {
 
         <VideoPlayer
           src="/images/video-intro.mp4"
-          poster="/images/studio-collage.webp"
-          posterAlt="Inside Shenandoah Electrolysis — treatment rooms, reception, and studio spaces"
+          poster="/images/video-intro-poster.webp"
+          posterAlt="Gillian Vickers introducing Shenandoah Electrolysis"
           className="!rounded-2xl !shadow-elegant"
         />
       </div>

@@ -157,8 +157,8 @@ function MeetGillianSection() {
 
             <VideoPlayer
               src="/images/video-intro.mp4"
-              poster="/images/treatment-room.webp"
-              posterAlt="Inside the Shenandoah Electrolysis treatment room"
+              poster="/images/video-intro-poster.webp"
+              posterAlt="Gillian Vickers introducing Shenandoah Electrolysis"
             />
           </div>
 
