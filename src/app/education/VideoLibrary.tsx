@@ -170,12 +170,12 @@ function VideoThumbnail({
         <img
           src={thumbnail}
           alt={video.title}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
         />
       ) : video.mp4Src ? (
         <video
           src={video.mp4Src}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
           muted
           playsInline
           preload="metadata"
