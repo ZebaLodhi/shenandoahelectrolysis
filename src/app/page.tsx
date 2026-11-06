@@ -213,7 +213,7 @@ const benefits = [
   {
     title: "Permanent Results",
     description:
-      "Electrolysis is the only hair removal method recognized by the FDA as providing permanent results. Once a hair follicle is treated, it does not grow back.",
+      "The only hair removal method recognized by the FDA as permanent. Once a follicle is treated, it does not grow back.",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -221,19 +221,9 @@ const benefits = [
     ),
   },
   {
-    title: "Precision Treatment",
-    description:
-      "Each hair follicle is individually treated with exacting precision, making electrolysis ideal for delicate areas like eyebrows, upper lip, and chin.",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M7.848 8.25l1.536.887M7.848 8.25a3 3 0 11-5.196-3 3 3 0 015.196 3zm1.536.887a2.165 2.165 0 011.083 1.839c.005.351.054.695.14 1.024M9.384 9.137l2.077 1.199M7.848 15.75l1.536-.887m-1.536.887a3 3 0 11-5.196 3 3 3 0 015.196-3zm1.536-.887a2.165 2.165 0 001.083-1.838c.005-.352.054-.696.14-1.025m-1.223 2.863l2.077-1.199m0-3.328a4.323 4.323 0 012.068-1.379l5.325-1.628a4.5 4.5 0 012.48-.044l.803.215-7.794 4.5m-2.882-1.664A4.331 4.331 0 0010.607 12m3.736 0l7.794 4.5-.802.215a4.5 4.5 0 01-2.48-.043l-5.326-1.629a4.324 4.324 0 01-2.068-1.379M14.343 12l-2.882 1.664" />
-      </svg>
-    ),
-  },
-  {
     title: "All Skin Tones & Hair Colors",
     description:
-      "Unlike laser treatments, electrolysis is effective on every skin tone and every hair color, including blonde, red, gray, and white hair.",
+      "Unlike laser, electrolysis works on every skin tone and every hair color — including blonde, red, gray, and white hair.",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
@@ -241,19 +231,9 @@ const benefits = [
     ),
   },
   {
-    title: "FDA-Recognized",
-    description:
-      "Electrolysis is the only method of hair removal that the U.S. Food and Drug Administration (FDA) recognizes as permanent.",
-    icon: (
-      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-      </svg>
-    ),
-  },
-  {
     title: "Personalized Care",
     description:
-      "Every treatment plan is tailored to your unique needs, skin type, and hair removal goals. You will never receive a one-size-fits-all approach.",
+      "Every treatment plan is tailored to your unique needs, skin type, and goals. You will never receive a one-size-fits-all approach.",
     icon: (
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
@@ -279,7 +259,7 @@ function WhyElectrolysisSection() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-10">
           {benefits.map((b) => (
             <div
               key={b.title}
@@ -307,29 +287,19 @@ function WhyElectrolysisSection() {
 /* ================================================================== */
 const services = [
   {
-    title: "Electrolysis Hair Removal",
+    title: "Facial Electrolysis",
     description:
-      "Comprehensive permanent hair removal using professional-grade electrolysis equipment for lasting results on any area of the body.",
+      "Gentle, precise treatment for unwanted facial hair — upper lip, chin, eyebrows, and sideburns — with permanent results.",
   },
   {
-    title: "Facial Hair Removal",
+    title: "Body Electrolysis",
     description:
-      "Gentle, precise treatment for unwanted facial hair, restoring confidence with permanent results in a comfortable setting.",
+      "Effective permanent hair removal for larger areas including underarms, bikini line, legs, arms, and more.",
   },
   {
-    title: "Chin & Upper Lip Treatment",
+    title: "Precision & Shaping",
     description:
-      "Targeted electrolysis for the chin and upper lip areas, among the most common and rewarding treatment zones.",
-  },
-  {
-    title: "Eyebrow Shaping & Precision Areas",
-    description:
-      "Achieve perfectly defined brows and treat other precision areas with the unmatched accuracy of electrolysis.",
-  },
-  {
-    title: "Body Hair Removal",
-    description:
-      "Effective permanent hair removal for larger body areas including underarms, bikini line, legs, and more.",
+      "Perfectly defined brows, hairline refinement, and detail work with the unmatched accuracy only electrolysis provides.",
   },
 ];
 
@@ -350,7 +320,7 @@ function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {services.map((service) => (
             <div
               key={service.title}
