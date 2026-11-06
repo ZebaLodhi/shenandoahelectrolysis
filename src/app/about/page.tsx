@@ -33,6 +33,7 @@ function AboutHero() {
               fill
               className="object-cover object-top"
               sizes="(max-width: 768px) 100vw, 50vw"
+              quality={90}
               priority
             />
           </div>
