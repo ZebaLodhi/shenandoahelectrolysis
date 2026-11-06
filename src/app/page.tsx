@@ -120,12 +120,11 @@ function WelcomeSection() {
             </div>
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-soft mt-8">
               <Image
-                src="/images/gillian-vickers.webp"
-                alt="Gillian Vickers, professional electrologist and owner of Shenandoah Electrolysis"
+                src="/images/studio-collage.webp"
+                alt="Shenandoah Electrolysis studio — reception, treatment spaces, and welcoming interior"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 768px) 50vw, 25vw"
-                quality={90}
               />
             </div>
           </div>
