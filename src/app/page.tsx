@@ -344,22 +344,25 @@ function ServicesSection() {
 /* ================================================================== */
 const videosPreviews = [
   {
-    title: "What Is Electrolysis?",
+    title: "Welcome to Shenandoah Electrolysis",
     description:
-      "A clear, approachable overview of how electrolysis works and why it is the gold standard for permanent hair removal.",
-    youtubeId: "OkPKZIPf5MM",
+      "Gillian introduces her practice and shares her passion for helping clients achieve permanent hair removal with personalized care.",
+    mp4Src: "/images/video-intro.mp4",
+    poster: "/images/video-intro-poster.webp",
   },
   {
-    title: "Your First Appointment",
+    title: "Inside the Treatment Room",
     description:
-      "Everything you need to know before your first visit, from preparation tips to what happens during treatment.",
-    youtubeId: "quoq_YaXTYE",
+      "Take a look at Gillian's professional treatment environment and learn about the care and precision that goes into every session.",
+    mp4Src: "/images/video-vertical-1.mp4",
+    poster: "/images/video-vertical-1-poster.webp",
   },
   {
-    title: "Electrolysis vs. Laser",
+    title: "Your Electrolysis Journey",
     description:
-      "Understand the key differences between electrolysis and laser hair removal so you can make the best choice for your goals.",
-    youtubeId: "yeSJihG4dx0",
+      "Gillian walks you through what to expect during your electrolysis journey — from the initial consultation to your permanent results.",
+    mp4Src: "/images/video-vertical-2.mp4",
+    poster: "/images/video-vertical-2-poster.webp",
   },
 ];
 
@@ -384,27 +387,26 @@ function EducationPreviewSection() {
         <div className="grid md:grid-cols-3 gap-8">
           {videosPreviews.map((v) => (
             <div key={v.title} className="group">
-              <a
-                href={`https://www.youtube.com/watch?v=${v.youtubeId}`}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/education"
                 className="relative aspect-video rounded-xl overflow-hidden mb-5 block bg-charcoal"
               >
-                <img
-                  src={`https://img.youtube.com/vi/${v.youtubeId}/hqdefault.jpg`}
+                <Image
+                  src={v.poster}
                   alt={v.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-charcoal/20 group-hover:bg-charcoal/10 transition-colors duration-300" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-soft group-hover:scale-110 transition-transform duration-300">
-                    <svg className="w-5 h-5 text-red-600 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-charcoal ml-0.5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
                 </div>
-              </a>
+              </Link>
               <h3 className="font-serif text-lg text-charcoal mb-2">
                 {v.title}
               </h3>
