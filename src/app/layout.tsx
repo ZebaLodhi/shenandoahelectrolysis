@@ -20,7 +20,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shenandoahelectrolysis.com"),
+  metadataBase: new URL("https://shenandoahelectrolysis.vercel.app"),
   title: {
     default: "Shenandoah Electrolysis by Gillian Vickers | Professional Permanent Hair Removal",
     template: "%s | Shenandoah Electrolysis",
