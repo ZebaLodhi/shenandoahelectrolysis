@@ -117,10 +117,10 @@ function MeetGillianSection() {
   return (
     <section className="py-section bg-ivory">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Photo + Video */}
           <div className="space-y-6">
-            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-elegant">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-elegant">
               <Image
                 src="/images/gillian-vickers.webp"
                 alt="Gillian Vickers, professional electrologist and owner of Shenandoah Electrolysis"
