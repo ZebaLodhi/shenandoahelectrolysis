@@ -46,7 +46,7 @@ export default function Navigation() {
               href="/"
               className={cn(
                 "font-serif text-lg sm:text-xl font-semibold tracking-tight transition-colors duration-300",
-                isScrolled || !isHome ? "text-charcoal" : "text-white"
+                isScrolled || !isHome ? "text-charcoal" : "text-charcoal"
               )}
             >
               {SITE_NAME}
@@ -63,10 +63,10 @@ export default function Navigation() {
                     pathname === link.href
                       ? isScrolled || !isHome
                         ? "text-champagne-dark bg-champagne/10"
-                        : "text-champagne-light bg-white/10"
+                        : "text-champagne bg-champagne/10"
                       : isScrolled || !isHome
                         ? "text-warm-gray hover:text-charcoal hover:bg-charcoal/5"
-                        : "text-white/80 hover:text-white hover:bg-white/10"
+                        : "text-warm-gray hover:text-charcoal hover:bg-charcoal/5"
                   )}
                 >
                   {link.label}
@@ -91,7 +91,7 @@ export default function Navigation() {
                 "lg:hidden p-2 rounded-lg transition-colors",
                 isScrolled || !isHome
                   ? "text-charcoal hover:bg-charcoal/5"
-                  : "text-white hover:bg-white/10"
+                  : "text-charcoal hover:bg-charcoal/5"
               )}
               aria-label={isMobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileOpen}

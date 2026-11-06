@@ -91,10 +91,13 @@ export default function RootLayout({
     description:
       "Professional electrolysis and permanent hair removal by Gillian Vickers. FDA-recognized treatments for all skin tones and hair types.",
     url: "https://shenandoahelectrolysis.com",
+    /* PLACEHOLDER: Replace with actual phone number */
     telephone: "(555) 000-0000",
+    /* PLACEHOLDER: Replace with actual email */
     email: "hello@shenandoahelectrolysis.com",
     address: {
       "@type": "PostalAddress",
+      /* PLACEHOLDER: Replace with actual business address */
       streetAddress: "123 Main Street, Suite 100",
       addressLocality: "Your City",
       addressRegion: "VA",
