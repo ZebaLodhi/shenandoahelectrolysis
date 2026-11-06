@@ -62,6 +62,7 @@ export const metadata: Metadata = {
     title: "Shenandoah Electrolysis by Gillian Vickers",
     description:
       "Professional electrolysis and permanent hair removal. FDA-recognized treatments for all skin tones and hair types.",
+    images: ["/images/og-image.jpg"],
   },
   robots: {
     index: true,
