@@ -426,21 +426,21 @@ function EducationPreviewSection() {
 const testimonials = [
   {
     quote:
-      "[Placeholder testimonial — replace with a real client review once available.]",
-    name: "[Client Name]",
-    detail: "[Treatment type]",
+      "My visit here started with a really comprehensive consultation with Gillian. She is very well-informed and up-to-date with all of her equipment. The procedure went smoothly and was far less painful than I expected. I'd highly recommend making an appointment with Gillian if you have any kind of electrolysis needs!",
+    name: "Theresa Goudie",
+    detail: "Google Review",
   },
   {
     quote:
-      "[Placeholder testimonial — replace with a real client review once available.]",
-    name: "[Client Name]",
-    detail: "[Treatment type]",
+      "So glad to finally have electrolysis so near Charles Town, WV! Gillian of Shenandoah Electrolysis is great — she worked hard to get all my hairs and I hardly felt anything! She works out of a really nice spa called Personal Reflection in Inwood, WV. She is the perfect addition to that spa. Highly recommended!",
+    name: "Anne Mercier",
+    detail: "Google Review",
   },
   {
     quote:
-      "[Placeholder testimonial — replace with a real client review once available.]",
-    name: "[Client Name]",
-    detail: "[Treatment type]",
+      "So excited to find electrolysis here!! Just found Gillian of Shenandoah Electrolysis working at Personal Reflection Day Spa in Inwood. What a great spa! So relaxing. And Gillian is a great Electrolgist — so gentle and thorough!",
+    name: "Karen Fegani",
+    detail: "Google Review",
   },
 ];
 
@@ -452,9 +452,19 @@ function TestimonialsSection() {
           <p className="text-champagne font-sans text-sm tracking-[0.2em] uppercase mb-4">
             Client Stories
           </p>
-          <h2 className="font-serif text-display-sm md:text-display-md text-charcoal">
+          <h2 className="font-serif text-display-sm md:text-display-md text-charcoal mb-4">
             What Our Clients Say
           </h2>
+          <div className="flex items-center justify-center gap-2 text-sm text-warm-gray">
+            <div className="flex gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} className="w-4 h-4 text-champagne" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              ))}
+            </div>
+            <span>5.0 on Google</span>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
