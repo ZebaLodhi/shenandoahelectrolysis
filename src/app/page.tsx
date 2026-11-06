@@ -118,7 +118,7 @@ function MeetGillianSection() {
     <section className="py-section bg-ivory">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-          {/* Photo + Video */}
+          {/* Left column: Photo + Video (desktop) / Photo only (mobile) */}
           <div className="space-y-6">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-elegant">
               <Image
@@ -131,11 +131,13 @@ function MeetGillianSection() {
               />
             </div>
 
-            <VideoPlayer
-              src="/images/video-intro.mp4"
-              poster="/images/video-intro-poster.webp"
-              posterAlt="Gillian Vickers introducing Shenandoah Electrolysis"
-            />
+            <div className="hidden lg:block">
+              <VideoPlayer
+                src="/images/video-intro.mp4"
+                poster="/images/video-intro-poster.webp"
+                posterAlt="Gillian Vickers introducing Shenandoah Electrolysis"
+              />
+            </div>
           </div>
 
           {/* Text */}
@@ -176,6 +178,15 @@ function MeetGillianSection() {
               </svg>
             </Link>
           </div>
+        </div>
+
+        {/* Video below text on mobile only */}
+        <div className="mt-10 lg:hidden">
+          <VideoPlayer
+            src="/images/video-intro.mp4"
+            poster="/images/video-intro-poster.webp"
+            posterAlt="Gillian Vickers introducing Shenandoah Electrolysis"
+          />
         </div>
       </div>
     </section>
