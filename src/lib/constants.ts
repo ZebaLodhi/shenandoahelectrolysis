@@ -17,20 +17,21 @@ export const NAV_LINKS = [
 ] as const;
 
 export const CONTACT_INFO = {
-  phone: "(555) 000-0000",
-  email: "hello@shenandoahelectrolysis.com",
+  phone: "(703) 819-2037",
+  email: "gillian@shenandoahelectrolysis.com",
   address: {
-    street: "123 Main Street",
-    suite: "Suite 100",
-    city: "Your City",
-    state: "VA",
-    zip: "00000",
+    street: "201 N George St",
+    suite: "Suite 101",
+    city: "Charles Town",
+    state: "WV",
+    zip: "25414",
   },
   hours: [
     { days: "Monday – Friday", time: "9:00 AM – 5:00 PM" },
     { days: "Saturday", time: "By Appointment" },
     { days: "Sunday", time: "Closed" },
   ],
+  googleBusinessProfile: "https://share.google/OObDm6xUfOOttvCqD",
 } as const;
 
 export const SOCIAL_LINKS = {

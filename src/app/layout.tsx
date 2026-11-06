@@ -91,17 +91,14 @@ export default function RootLayout({
     description:
       "Professional electrolysis and permanent hair removal by Gillian Vickers. FDA-recognized treatments for all skin tones and hair types.",
     url: "https://shenandoahelectrolysis.com",
-    /* PLACEHOLDER: Replace with actual phone number */
-    telephone: "(555) 000-0000",
-    /* PLACEHOLDER: Replace with actual email */
-    email: "hello@shenandoahelectrolysis.com",
+    telephone: "(703) 819-2037",
+    email: "gillian@shenandoahelectrolysis.com",
     address: {
       "@type": "PostalAddress",
-      /* PLACEHOLDER: Replace with actual business address */
-      streetAddress: "123 Main Street, Suite 100",
-      addressLocality: "Your City",
-      addressRegion: "VA",
-      postalCode: "00000",
+      streetAddress: "201 N George St, Suite 101",
+      addressLocality: "Charles Town",
+      addressRegion: "WV",
+      postalCode: "25414",
       addressCountry: "US",
     },
     openingHoursSpecification: [
@@ -120,7 +117,7 @@ export default function RootLayout({
     ],
     priceRange: "$$",
     image: "https://shenandoahelectrolysis.com/images/og-image.jpg",
-    sameAs: [],
+    sameAs: ["https://share.google/OObDm6xUfOOttvCqD"],
   };
 
   const serviceSchema = {
