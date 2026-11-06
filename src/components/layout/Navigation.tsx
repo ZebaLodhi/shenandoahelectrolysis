@@ -28,16 +28,14 @@ export default function Navigation() {
     return () => { document.body.style.overflow = ""; };
   }, [isMobileOpen]);
 
-  const isHome = pathname === "/";
-
   return (
     <>
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-          isScrolled || !isHome
+          isScrolled
             ? "bg-white/95 backdrop-blur-md shadow-soft"
-            : "bg-transparent"
+            : "bg-white"
         )}
       >
         <div className="container-custom">
@@ -49,10 +47,7 @@ export default function Navigation() {
                 alt="Shenandoah Electrolysis"
                 width={200}
                 height={60}
-                className={cn(
-                  "h-10 sm:h-12 w-auto transition-all duration-500",
-                  isScrolled || !isHome ? "" : "brightness-0 invert"
-                )}
+                className="h-12 sm:h-12 w-auto"
                 priority
               />
             </Link>
@@ -66,12 +61,8 @@ export default function Navigation() {
                   className={cn(
                     "px-3 py-2 text-sm font-sans font-medium tracking-wide transition-colors duration-300 rounded-full",
                     pathname === link.href
-                      ? isScrolled || !isHome
-                        ? "text-champagne-dark bg-champagne/10"
-                        : "text-champagne-light bg-white/10"
-                      : isScrolled || !isHome
-                        ? "text-warm-gray hover:text-charcoal hover:bg-charcoal/5"
-                        : "text-ivory/80 hover:text-white hover:bg-white/10"
+                      ? "text-champagne-dark bg-champagne/10"
+                      : "text-warm-gray hover:text-charcoal hover:bg-charcoal/5"
                   )}
                 >
                   {link.label}
@@ -83,12 +74,7 @@ export default function Navigation() {
             <div className="hidden lg:block">
               <Link
                 href={GLOSSGENIUS_BOOKING_URL}
-                className={cn(
-                  "inline-flex items-center px-6 py-2.5 text-sm font-sans font-medium tracking-wide uppercase rounded-full transition-all duration-300",
-                  isScrolled || !isHome
-                    ? "bg-champagne text-charcoal hover:bg-champagne-dark hover:shadow-soft-lg"
-                    : "bg-champagne text-charcoal hover:bg-champagne-light"
-                )}
+                className="inline-flex items-center px-6 py-2.5 text-sm font-sans font-medium tracking-wide uppercase rounded-full transition-all duration-300 bg-champagne text-charcoal hover:bg-champagne-dark hover:shadow-soft-lg"
               >
                 Book Now
               </Link>
@@ -97,12 +83,7 @@ export default function Navigation() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className={cn(
-                "lg:hidden p-2 rounded-lg transition-colors",
-                isScrolled || !isHome
-                  ? "text-charcoal hover:bg-charcoal/5"
-                  : "text-ivory hover:bg-white/10"
-              )}
+              className="lg:hidden p-2 rounded-lg transition-colors text-charcoal hover:bg-charcoal/5"
               aria-label={isMobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileOpen}
             >
