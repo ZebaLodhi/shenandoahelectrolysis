@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import VideoPlayer from "@/components/ui/VideoPlayer";
 
 export const metadata: Metadata = {
   title: "Shenandoah Electrolysis by Gillian Vickers | Professional Permanent Hair Removal",
@@ -148,30 +149,11 @@ function MeetGillianSection() {
               />
             </div>
 
-            {/* Video intro — replace with YouTube/Vimeo embed once videos are uploaded */}
-            <div
-              className="relative aspect-video rounded-xl overflow-hidden shadow-soft"
-              aria-label="Introductory video from Gillian Vickers"
-            >
-              <Image
-                src="/images/treatment-room.webp"
-                alt="Inside the Shenandoah Electrolysis treatment room"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-charcoal/20" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-soft cursor-pointer hover:scale-105 transition-transform">
-                  <svg className="w-6 h-6 text-charcoal ml-1" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
-              </div>
-              <p className="absolute bottom-4 left-4 text-white/80 font-sans text-xs">
-                Watch Gillian&apos;s introduction
-              </p>
-            </div>
+            <VideoPlayer
+              src="/images/video-intro.mp4"
+              poster="/images/treatment-room.webp"
+              posterAlt="Inside the Shenandoah Electrolysis treatment room"
+            />
           </div>
 
           {/* Text */}

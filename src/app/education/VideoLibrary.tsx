@@ -6,7 +6,7 @@
 //    - Vimeo: the number in the URL (e.g., 123456789)
 // 3. Add a new entry to the 'videos' array below
 // 4. Fill in: id (unique string), title, description, category, duration
-// 5. Set EITHER youtubeId OR vimeoId (not both)
+// 5. Set youtubeId, vimeoId, OR mp4Src (for self-hosted .mp4 in /public/images/)
 // 6. Optionally add a custom thumbnailUrl (otherwise YouTube thumbnail is used)
 //
 // HOW TO CHANGE A VIDEO'S CATEGORY:
@@ -30,6 +30,7 @@ interface Video {
   category: string;
   youtubeId?: string;
   vimeoId?: string;
+  mp4Src?: string;
   thumbnailUrl?: string;
   duration?: string;
   featured?: boolean;
@@ -51,31 +52,31 @@ const CATEGORIES = [
 const videos: Video[] = [
   {
     id: "video-1",
-    title: "What Is Electrolysis? Your Complete Guide",
+    title: "Welcome to Shenandoah Electrolysis",
     description:
-      "Gillian explains the fundamentals of electrolysis — what it is, how it works, and why it remains the only FDA-recognized method of permanent hair removal.",
+      "Gillian introduces her practice and shares her passion for helping clients achieve permanent hair removal with personalized care.",
     category: "Electrolysis Explained",
-    // youtubeId: "YOUR_YOUTUBE_ID_HERE",
-    duration: "8:24",
+    mp4Src: "/images/video-intro.mp4",
+    duration: "0:43",
     featured: true,
   },
   {
     id: "video-2",
-    title: "How Electrolysis Works: The Science Behind It",
+    title: "Inside the Treatment Room",
     description:
-      "A closer look at the three modalities of electrolysis — galvanic, thermolysis, and blend — and how each targets the hair follicle for permanent results.",
+      "Take a look at Gillian's professional treatment environment and learn about the care and precision that goes into every electrolysis session.",
     category: "How It Works",
-    // youtubeId: "YOUR_YOUTUBE_ID_HERE",
-    duration: "6:15",
+    mp4Src: "/images/video-vertical-1.mp4",
+    duration: "1:21",
   },
   {
     id: "video-3",
-    title: "Your First Electrolysis Appointment: What to Expect",
+    title: "Your Electrolysis Journey",
     description:
-      "Feeling nervous about your first visit? Gillian walks you through every step so you know exactly what to expect from consultation to treatment.",
+      "Gillian walks you through what to expect during your electrolysis journey — from the initial consultation to your permanent results.",
     category: "Your First Appointment",
-    // youtubeId: "YOUR_YOUTUBE_ID_HERE",
-    duration: "10:02",
+    mp4Src: "/images/video-vertical-2.mp4",
+    duration: "1:17",
   },
   {
     id: "video-4",
@@ -168,6 +169,14 @@ function VideoThumbnail({
           alt={video.title}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
+      ) : video.mp4Src ? (
+        <video
+          src={video.mp4Src}
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          muted
+          playsInline
+          preload="metadata"
+        />
       ) : (
         <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-sage-light/40 to-beige">
           <div className="text-center">
@@ -200,6 +209,7 @@ function VideoModal({
   onClose: () => void;
 }) {
   const hasEmbed = video.youtubeId || video.vimeoId;
+  const hasMp4 = !!video.mp4Src;
   const embedUrl = video.youtubeId
     ? `https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&rel=0`
     : video.vimeoId
@@ -226,7 +236,17 @@ function VideoModal({
           <CloseIcon className="h-5 w-5" />
         </button>
         <div className="overflow-hidden rounded-xl bg-charcoal shadow-elegant">
-          {hasEmbed && embedUrl ? (
+          {hasMp4 ? (
+            <div className="aspect-video bg-black flex items-center justify-center">
+              <video
+                src={video.mp4Src}
+                className="max-h-full max-w-full"
+                controls
+                autoPlay
+                playsInline
+              />
+            </div>
+          ) : hasEmbed && embedUrl ? (
             <div className="aspect-video">
               <iframe
                 src={embedUrl}
@@ -244,8 +264,7 @@ function VideoModal({
                   {video.title}
                 </p>
                 <p className="mt-2 font-sans text-sm text-white/60">
-                  Video embed will appear here once a YouTube or Vimeo ID is
-                  added.
+                  Video coming soon
                 </p>
               </div>
             </div>
