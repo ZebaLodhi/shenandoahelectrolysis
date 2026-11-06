@@ -124,27 +124,22 @@ export default function BlogArticlePage({ params }: PageProps) {
           </div>
         </section>
 
-        {/* Featured Image Placeholder */}
+        {/* Featured Image */}
         <div className="max-w-4xl mx-auto px-4 -mt-8">
           <div className="aspect-[21/9] bg-beige rounded-2xl overflow-hidden relative shadow-elegant">
-            <div className="absolute inset-0 flex items-center justify-center text-taupe">
-              <div className="text-center">
-                <svg
-                  className="w-12 h-12 mx-auto mb-2 opacity-30"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={1.5}
-                    d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
+            {post.featuredImage ? (
+              <Image
+                src={post.featuredImage}
+                alt={post.featuredImageAlt}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 896px"
+              />
+            ) : (
+              <div className="absolute inset-0 flex items-center justify-center text-taupe">
                 <p className="text-sm opacity-50">{post.featuredImageAlt}</p>
               </div>
-            </div>
+            )}
           </div>
         </div>
 
@@ -230,21 +225,19 @@ export default function BlogArticlePage({ params }: PageProps) {
                   >
                     <article className="bg-ivory rounded-2xl overflow-hidden hover:shadow-soft transition-all duration-300 h-full flex flex-col">
                       <div className="aspect-[16/10] bg-beige relative">
-                        <div className="absolute inset-0 flex items-center justify-center text-taupe">
-                          <svg
-                            className="w-8 h-8 opacity-30"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={1.5}
-                              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                            />
-                          </svg>
-                        </div>
+                        {related.featuredImage ? (
+                          <Image
+                            src={related.featuredImage}
+                            alt={related.featuredImageAlt}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center text-taupe">
+                            <span className="text-sm opacity-50">Article image</span>
+                          </div>
+                        )}
                       </div>
                       <div className="p-6 flex flex-col flex-1">
                         <span className="inline-block self-start bg-sage-light/30 text-sage-dark text-xs font-medium px-3 py-1 rounded-full mb-3">
