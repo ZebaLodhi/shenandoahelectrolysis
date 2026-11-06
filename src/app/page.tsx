@@ -26,20 +26,20 @@ function HeroSection() {
       <HeroVideo />
 
       {/* Dark gradient overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/20 z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/60 to-charcoal/40 z-[1]" />
 
       {/* Content */}
       <div className="relative z-10 w-full pb-10 sm:pb-20 lg:pb-28 pt-28 sm:pt-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <p className="text-champagne font-sans text-xs sm:text-sm tracking-[0.25em] uppercase mb-5">
+            <p className="text-champagne font-sans text-xs sm:text-sm tracking-[0.25em] uppercase mb-5 [text-shadow:_0_1px_6px_rgb(0_0_0_/_30%)]">
               Electrolysis &amp; Skin Studio
             </p>
-            <h1 className="font-serif text-display-lg md:text-display-xl text-ivory mb-5 leading-[1.1]">
+            <h1 className="font-serif text-display-lg md:text-display-xl text-ivory mb-5 leading-[1.1] [text-shadow:_0_2px_12px_rgb(0_0_0_/_40%)]">
               Permanent results,{" "}
               <em className="italic text-champagne-light">gently</em> done.
             </h1>
-            <p className="text-ivory/80 font-sans text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
+            <p className="text-ivory/90 font-sans text-base sm:text-lg leading-relaxed mb-8 max-w-lg [text-shadow:_0_1px_8px_rgb(0_0_0_/_30%)]">
               Shenandoah Electrolysis is a calm, private studio for the only
               hair removal method designed to be permanent — on every hair color
               and every skin tone.
