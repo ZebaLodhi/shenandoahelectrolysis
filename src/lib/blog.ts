@@ -17,6 +17,7 @@ export interface BlogPost {
   updatedDate?: string;
   category: string;
   tags: string[];
+  featuredImage?: string;
   featuredImageAlt: string;
   readingTime: string;
 }
@@ -32,6 +33,7 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-11-15",
     category: "Electrolysis Education",
     tags: ["electrolysis", "permanent hair removal", "FDA", "hair removal methods"],
+    featuredImage: "/images/blog/electrolysis-before-after.webp",
     featuredImageAlt: "Professional electrolysis treatment in a clean, modern clinical setting",
     readingTime: "8 min read",
     content: `
@@ -122,6 +124,7 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-11-08",
     category: "Electrolysis Education",
     tags: ["how electrolysis works", "electrolysis science", "hair growth cycles", "thermolysis", "galvanic"],
+    featuredImage: "/images/blog/electrolysis-closeup.webp",
     featuredImageAlt: "Close-up illustration of the electrolysis process showing a sterile probe treating a hair follicle",
     readingTime: "9 min read",
     content: `
@@ -212,6 +215,7 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-10-25",
     category: "Comparisons",
     tags: ["electrolysis vs laser", "permanent hair removal", "laser hair removal", "hair removal comparison"],
+    featuredImage: "/images/blog/electrolysis-procedure-body.webp",
     featuredImageAlt: "Side-by-side comparison illustration of electrolysis and laser hair removal treatments",
     readingTime: "10 min read",
     content: `
@@ -319,6 +323,7 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-10-18",
     category: "Electrolysis Education",
     tags: ["permanent hair removal", "FDA electrolysis", "electrolysis results", "hair removal permanence"],
+    featuredImage: "/images/blog/electrolysis-eyebrow.webp",
     featuredImageAlt: "Confident woman with smooth, clear skin representing permanent hair removal results",
     readingTime: "7 min read",
     content: `
@@ -400,6 +405,7 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-10-10",
     category: "Electrolysis Education",
     tags: ["electrolysis skin tones", "electrolysis hair colors", "inclusive hair removal", "blonde hair removal", "gray hair removal"],
+    featuredImage: "/images/gillian-vickers.webp",
     featuredImageAlt: "Diverse group of people representing the inclusivity of electrolysis across all skin tones",
     readingTime: "7 min read",
     content: `
@@ -486,6 +492,7 @@ export const blogPosts: BlogPost[] = [
     publishedDate: "2024-10-01",
     category: "Treatment Guide",
     tags: ["first appointment", "what to expect", "electrolysis preparation", "treatment process"],
+    featuredImage: "/images/treatment-room.webp",
     featuredImageAlt: "Welcoming, calm electrolysis treatment room with comfortable treatment chair and professional equipment",
     readingTime: "8 min read",
     content: `
@@ -581,199 +588,8 @@ export const blogPosts: BlogPost[] = [
       </div>
     `,
   },
-  {
-    slug: "how-many-electrolysis-sessions-needed",
-    title: "How Many Electrolysis Sessions Will I Need?",
-    metaTitle: "How Many Electrolysis Sessions Do You Need?",
-    metaDescription: "Wondering how many electrolysis sessions you'll need? Learn about the factors that affect treatment duration and why personalized plans matter.",
-    excerpt: "The number of electrolysis sessions you'll need depends on several individual factors. Learn what influences your treatment timeline and why personalized plans are essential.",
-    author: "Gillian Vickers",
-    publishedDate: "2024-09-20",
-    category: "Treatment Guide",
-    tags: ["electrolysis sessions", "treatment plan", "treatment duration", "hair removal timeline"],
-    featuredImageAlt: "Calendar and treatment planning materials representing an electrolysis treatment schedule",
-    readingTime: "7 min read",
-    content: `
-      <p class="text-lg leading-relaxed text-warm-gray mb-6">"How many sessions will I need?" is one of the most frequently asked questions about electrolysis — and the most honest answer is: <em>it varies</em>. While this may not be the definitive number you're hoping for, understanding the factors that influence your treatment timeline will help you set realistic expectations and feel confident in the process.</p>
-
-      <h2 id="why-no-single-answer" class="text-display-sm font-serif text-charcoal mt-12 mb-4">Why There's No One-Size-Fits-All Answer</h2>
-      <p class="text-warm-gray leading-relaxed mb-4">Every person's hair growth is unique — shaped by genetics, hormones, and biology. Because of this, it would be irresponsible for any practitioner to guarantee a specific number of sessions without a thorough assessment. What we can do is explain the factors that affect your individual timeline and develop a personalized plan based on your specific situation.</p>
-
-      <h2 id="key-factors" class="text-display-sm font-serif text-charcoal mt-12 mb-4">Key Factors That Affect Treatment Duration</h2>
-
-      <h3 class="font-serif text-xl text-charcoal mt-8 mb-3">1. Hair Growth Cycles</h3>
-      <p class="text-warm-gray leading-relaxed mb-4">As discussed in our article on <a href="/blog/how-does-electrolysis-work" class="text-sage-dark hover:text-champagne underline">how electrolysis works</a>, hair grows in three phases: anagen (active), catagen (transition), and telogen (resting). Electrolysis is most effective during the anagen phase. Since only a portion of follicles are in this phase at any given time, multiple sessions are needed to catch each follicle during its active period.</p>
-
-      <h3 class="font-serif text-xl text-charcoal mt-8 mb-3">2. Treatment Area</h3>
-      <p class="text-warm-gray leading-relaxed mb-4">Different areas of the body have different hair densities and growth cycles:</p>
-      <ul class="list-disc list-inside space-y-2 mb-6 text-warm-gray ml-4">
-        <li>Smaller areas like the upper lip or chin may have fewer total hairs but can be influenced by hormonal activity</li>
-        <li>Larger areas like the legs, arms, or back have more total follicles to treat</li>
-        <li>The growth cycle length varies by body area, affecting how frequently new hairs emerge</li>
-      </ul>
-
-      <h3 class="font-serif text-xl text-charcoal mt-8 mb-3">3. Hair Density and Coarseness</h3>
-      <p class="text-warm-gray leading-relaxed mb-4">Areas with denser hair growth naturally require more treatment time. Similarly, coarser hairs may require slightly different treatment approaches than fine, vellus hairs. Your electrologist will assess the hair in your treatment area during your initial consultation.</p>
-
-      <h3 class="font-serif text-xl text-charcoal mt-8 mb-3">4. Hormonal Influences</h3>
-      <p class="text-warm-gray leading-relaxed mb-4">Hormones play a significant role in hair growth. Conditions that affect hormone levels — such as polycystic ovary syndrome (PCOS), menopause, thyroid conditions, or certain medications — can stimulate new hair growth in some areas even as existing follicles are being treated. This doesn't mean electrolysis isn't working; it means new follicles are being activated by hormonal changes.</p>
-      <p class="text-warm-gray leading-relaxed mb-4">If hormonal factors are at play, your electrologist may recommend working with your healthcare provider to address the underlying cause alongside your electrolysis treatment.</p>
-
-      <h3 class="font-serif text-xl text-charcoal mt-8 mb-3">5. Previous Hair Removal Methods</h3>
-      <p class="text-warm-gray leading-relaxed mb-4">A history of tweezing or waxing can temporarily distort hair follicles, which may affect treatment. Shaving, on the other hand, does not impact the follicle and is generally compatible with electrolysis treatment.</p>
-
-      <h3 class="font-serif text-xl text-charcoal mt-8 mb-3">6. Consistency of Treatment</h3>
-      <p class="text-warm-gray leading-relaxed mb-4">Keeping your scheduled appointments is one of the most important factors in achieving results efficiently. Consistent treatment ensures that emerging hairs are caught during their active growth phase, progressively reducing the total amount of active hair.</p>
-
-      <h2 id="general-timeline" class="text-display-sm font-serif text-charcoal mt-12 mb-4">A General Sense of Timeline</h2>
-      <p class="text-warm-gray leading-relaxed mb-4">While specific numbers aren't appropriate to guarantee, here's a general sense of what to expect:</p>
-      <ul class="list-none space-y-3 mb-6 ml-4">
-        <li class="text-warm-gray leading-relaxed pl-4 border-l-2 border-sage"><strong class="text-charcoal">Initial phase:</strong> Sessions may be scheduled more frequently (often weekly or biweekly) to address the current growth of visible hair.</li>
-        <li class="text-warm-gray leading-relaxed pl-4 border-l-2 border-sage"><strong class="text-charcoal">Progressive phase:</strong> As hair density decreases, sessions may be spaced further apart (every few weeks).</li>
-        <li class="text-warm-gray leading-relaxed pl-4 border-l-2 border-sage"><strong class="text-charcoal">Completion phase:</strong> Sessions become infrequent as only scattered new hairs emerge. Treatment lengths decrease as well.</li>
-        <li class="text-warm-gray leading-relaxed pl-4 border-l-2 border-sage"><strong class="text-charcoal">Overall timeline:</strong> Treatment for a specific area may span several months to over a year for complete clearance, depending on the factors described above.</li>
-      </ul>
-      <p class="text-warm-gray leading-relaxed mb-4">The most important thing to understand is that permanent results <em>do</em> happen — the timeline simply varies by individual.</p>
-
-      <h2 id="importance-of-plan" class="text-display-sm font-serif text-charcoal mt-12 mb-4">The Importance of a Personalized Treatment Plan</h2>
-      <p class="text-warm-gray leading-relaxed mb-4">A qualified electrologist will develop a treatment plan tailored specifically to you. This plan takes into account:</p>
-      <ul class="list-disc list-inside space-y-2 mb-6 text-warm-gray ml-4">
-        <li>Your specific treatment areas and goals</li>
-        <li>The current density and type of hair</li>
-        <li>Any relevant health or hormonal factors</li>
-        <li>Your schedule and lifestyle</li>
-        <li>Your comfort and budget considerations</li>
-      </ul>
-      <p class="text-warm-gray leading-relaxed mb-4">As treatment progresses, your plan will be adjusted based on how your hair responds. This adaptive approach ensures that your treatment remains efficient and effective throughout the process.</p>
-
-      <h2 id="faq" class="text-display-sm font-serif text-charcoal mt-12 mb-4">Frequently Asked Questions</h2>
-      <div class="space-y-6 mb-8">
-        <div class="border-l-2 border-champagne pl-4">
-          <h3 class="font-serif text-xl text-charcoal mb-2">Can anyone guarantee how many sessions I'll need?</h3>
-          <p class="text-warm-gray leading-relaxed">Be cautious of any practitioner who guarantees a specific number of sessions. Because individual factors vary so widely, an ethical electrologist will provide a general estimate based on your assessment rather than making definitive promises.</p>
-        </div>
-        <div class="border-l-2 border-champagne pl-4">
-          <h3 class="font-serif text-xl text-charcoal mb-2">What happens if I miss sessions?</h3>
-          <p class="text-warm-gray leading-relaxed">Missing sessions doesn't erase previous progress — treated follicles remain permanently treated. However, gaps between sessions may extend your overall treatment timeline because emerging hairs won't be caught at their optimal growth phase.</p>
-        </div>
-        <div class="border-l-2 border-champagne pl-4">
-          <h3 class="font-serif text-xl text-charcoal mb-2">Will I see progress between sessions?</h3>
-          <p class="text-warm-gray leading-relaxed">Yes. Most clients notice a gradual thinning and reduction in hair density as treatment progresses. The area may look noticeably clearer between sessions as more follicles are permanently treated.</p>
-        </div>
-      </div>
-
-      <div class="bg-ivory-dark rounded-2xl p-8 text-center mt-12">
-        <h3 class="font-serif text-2xl text-charcoal mb-3">Ready to Begin Your Journey to Permanent Hair Removal?</h3>
-        <p class="text-warm-gray mb-6">Book your appointment at Shenandoah Electrolysis and take the first step toward permanently smooth skin.</p>
-        <a href="/contact" class="inline-block bg-champagne hover:bg-champagne-light text-charcoal font-medium px-8 py-3 rounded-full transition-colors">Book Your Appointment</a>
-      </div>
-    `,
-  },
-  {
-    slug: "electrolysis-aftercare-guide",
-    title: "Electrolysis Aftercare: How to Care for Your Skin After Treatment",
-    metaTitle: "Electrolysis Aftercare: Post-Treatment Skin Care",
-    metaDescription: "Follow these electrolysis aftercare tips to help your skin heal beautifully after treatment. Learn what to do, what to avoid, and when to seek advice.",
-    excerpt: "Proper aftercare helps your skin heal beautifully after electrolysis. Learn what to expect, what to do, what to avoid, and how to support your skin's recovery.",
-    author: "Gillian Vickers",
-    publishedDate: "2024-09-10",
-    category: "Aftercare",
-    tags: ["electrolysis aftercare", "post-treatment care", "skin care", "healing after electrolysis"],
-    featuredImageAlt: "Gentle skincare products and soothing aloe representing post-electrolysis aftercare",
-    readingTime: "7 min read",
-    content: `
-      <p class="text-lg leading-relaxed text-warm-gray mb-6">Taking good care of your skin after electrolysis is an important part of the treatment process. While electrolysis is a safe, well-established procedure, your skin does need a little extra attention afterward to heal properly and look its best. This guide covers everything you need to know about post-treatment care.</p>
-
-      <h2 id="what-to-expect" class="text-display-sm font-serif text-charcoal mt-12 mb-4">What to Expect After Treatment</h2>
-      <p class="text-warm-gray leading-relaxed mb-4">It's helpful to know what normal post-treatment skin looks like so you're not caught off guard. After an electrolysis session, you may experience:</p>
-      <ul class="list-none space-y-3 mb-6 ml-4">
-        <li class="text-warm-gray leading-relaxed pl-4 border-l-2 border-sage"><strong class="text-charcoal">Redness:</strong> Mild to moderate redness in the treated area is the most common response. This typically fades within a few hours, though it may last up to a day or two for some individuals.</li>
-        <li class="text-warm-gray leading-relaxed pl-4 border-l-2 border-sage"><strong class="text-charcoal">Slight swelling:</strong> Minor swelling or puffiness around treated follicles is normal and usually resolves within hours.</li>
-        <li class="text-warm-gray leading-relaxed pl-4 border-l-2 border-sage"><strong class="text-charcoal">Small bumps or raised spots:</strong> Tiny welts or bumps at each treated follicle are a normal skin response. These typically flatten within a day.</li>
-        <li class="text-warm-gray leading-relaxed pl-4 border-l-2 border-sage"><strong class="text-charcoal">Tenderness:</strong> The treated area may feel mildly tender or sensitive to the touch. This is temporary.</li>
-      </ul>
-      <p class="text-warm-gray leading-relaxed mb-4">These reactions are normal signs that your skin is responding to treatment and beginning to heal. They are not cause for concern.</p>
-
-      <h2 id="immediate-aftercare" class="text-display-sm font-serif text-charcoal mt-12 mb-4">Immediate Aftercare (First 24–48 Hours)</h2>
-      <p class="text-warm-gray leading-relaxed mb-4">The first day or two after treatment are the most important for protecting your skin:</p>
-
-      <h3 class="font-serif text-xl text-charcoal mt-8 mb-3">Do:</h3>
-      <ul class="list-disc list-inside space-y-2 mb-6 text-warm-gray ml-4">
-        <li><strong>Keep the area clean.</strong> Gently cleanse the treated area with a mild, fragrance-free cleanser and lukewarm water.</li>
-        <li><strong>Apply a soothing product if recommended.</strong> Your electrologist may suggest applying aloe vera gel, a gentle healing balm, or another soothing product. Follow their specific recommendations.</li>
-        <li><strong>Use a clean pillowcase</strong> if the treated area is on your face and you'll be sleeping soon after treatment.</li>
-        <li><strong>Stay hydrated.</strong> Drinking water supports your skin's natural healing process.</li>
-        <li><strong>Be gentle.</strong> Treat the area with care — pat dry rather than rubbing, and avoid unnecessary touching.</li>
-      </ul>
-
-      <h3 class="font-serif text-xl text-charcoal mt-8 mb-3">Avoid:</h3>
-      <ul class="list-disc list-inside space-y-2 mb-6 text-warm-gray ml-4">
-        <li><strong>Touching or picking at the treated area.</strong> Your hands carry bacteria, and picking can lead to irritation or scarring. Let your skin heal naturally.</li>
-        <li><strong>Makeup on the treated area</strong> for at least the period your electrologist recommends — often several hours or until the next day for facial treatments.</li>
-        <li><strong>Sun exposure.</strong> Protect treated skin from direct sunlight. If you must be outdoors, use a broad-spectrum sunscreen (SPF 30+) once the initial redness has subsided.</li>
-        <li><strong>Heat treatments.</strong> Avoid saunas, steam rooms, hot tubs, and very hot showers for 24–48 hours. Excess heat can aggravate treated skin.</li>
-        <li><strong>Swimming.</strong> Pools, hot tubs, and natural bodies of water expose treated skin to bacteria and chemicals. Wait at least 24–48 hours.</li>
-        <li><strong>Heavy exercise.</strong> Intense workouts produce sweat, which can irritate freshly treated skin. Light activity is generally fine, but give your skin a brief rest from intense sweating.</li>
-        <li><strong>Harsh skincare products.</strong> Avoid exfoliants, retinoids, glycolic acid, and other active ingredients on the treated area for a few days.</li>
-        <li><strong>Perfumes or scented products</strong> on the treated area, as these can cause irritation.</li>
-      </ul>
-
-      <h2 id="ongoing-care" class="text-display-sm font-serif text-charcoal mt-12 mb-4">Ongoing Care Between Sessions</h2>
-      <p class="text-warm-gray leading-relaxed mb-4">Between electrolysis sessions, maintaining good skin care supports your treatment results:</p>
-      <ul class="list-none space-y-3 mb-6 ml-4">
-        <li class="text-warm-gray leading-relaxed pl-4 border-l-2 border-champagne"><strong class="text-charcoal">Moisturize regularly.</strong> Keep the treatment area well-moisturized with a gentle, fragrance-free moisturizer. Hydrated skin responds better to treatment.</li>
-        <li class="text-warm-gray leading-relaxed pl-4 border-l-2 border-champagne"><strong class="text-charcoal">Protect from the sun.</strong> Use sunscreen on treated areas when outdoors. Sun-damaged or tanned skin can be more sensitive during treatment.</li>
-        <li class="text-warm-gray leading-relaxed pl-4 border-l-2 border-champagne"><strong class="text-charcoal">Do not tweeze or wax.</strong> Between sessions, do not remove hair by the root in the treatment area. These methods remove the hair from the follicle, making it impossible for your electrologist to treat. Shaving or trimming is generally acceptable — check with your practitioner.</li>
-        <li class="text-warm-gray leading-relaxed pl-4 border-l-2 border-champagne"><strong class="text-charcoal">Stay hydrated.</strong> Good hydration benefits both your skin and treatment effectiveness.</li>
-      </ul>
-
-      <h2 id="when-to-contact" class="text-display-sm font-serif text-charcoal mt-12 mb-4">When to Contact Your Electrologist</h2>
-      <p class="text-warm-gray leading-relaxed mb-4">While most aftereffects are normal and temporary, contact your electrologist if you experience:</p>
-      <ul class="list-disc list-inside space-y-2 mb-6 text-warm-gray ml-4">
-        <li>Signs of infection (increasing redness, warmth, pus, or unusual pain)</li>
-        <li>Reactions that don't improve after a few days</li>
-        <li>Unexpected changes in skin pigmentation</li>
-        <li>Any concerns that feel unusual to you</li>
-      </ul>
-      <p class="text-warm-gray leading-relaxed mb-4">It's always better to ask than to worry. Your electrologist is your partner in this process and wants to ensure your treatment goes smoothly.</p>
-
-      <h2 id="long-term-skin-care" class="text-display-sm font-serif text-charcoal mt-12 mb-4">Long-Term Skin Care</h2>
-      <p class="text-warm-gray leading-relaxed mb-4">As your electrolysis treatment progresses and the treatment area becomes clear, maintaining healthy skin habits will help you enjoy your results fully:</p>
-      <ul class="list-disc list-inside space-y-2 mb-6 text-warm-gray ml-4">
-        <li>Continue using gentle, quality skincare products</li>
-        <li>Maintain sun protection as part of your daily routine</li>
-        <li>Stay hydrated</li>
-        <li>Follow any specific long-term recommendations from your electrologist</li>
-      </ul>
-
-      <h2 id="faq" class="text-display-sm font-serif text-charcoal mt-12 mb-4">Frequently Asked Questions</h2>
-      <div class="space-y-6 mb-8">
-        <div class="border-l-2 border-champagne pl-4">
-          <h3 class="font-serif text-xl text-charcoal mb-2">How long will redness last after electrolysis?</h3>
-          <p class="text-warm-gray leading-relaxed">Redness typically fades within a few hours, though it may last up to a day or two for some people. The duration can vary based on your skin type, the treatment area, and the intensity of the session.</p>
-        </div>
-        <div class="border-l-2 border-champagne pl-4">
-          <h3 class="font-serif text-xl text-charcoal mb-2">Can I shave between electrolysis sessions?</h3>
-          <p class="text-warm-gray leading-relaxed">Generally, yes. Shaving cuts hair at the surface and doesn't affect the follicle. However, always confirm with your electrologist, as they may have specific recommendations for your treatment plan.</p>
-        </div>
-        <div class="border-l-2 border-champagne pl-4">
-          <h3 class="font-serif text-xl text-charcoal mb-2">When can I apply makeup after a facial electrolysis session?</h3>
-          <p class="text-warm-gray leading-relaxed">Most electrologists recommend waiting at least several hours, and ideally until the next day, before applying makeup to a treated area. This allows the skin to begin healing without the risk of irritation or clogged follicles from cosmetic products.</p>
-        </div>
-        <div class="border-l-2 border-champagne pl-4">
-          <h3 class="font-serif text-xl text-charcoal mb-2">What products should I use after treatment?</h3>
-          <p class="text-warm-gray leading-relaxed">Your electrologist is the best source for specific product recommendations. In general, gentle, fragrance-free products are preferred. Aloe vera gel is commonly recommended for its soothing properties. Avoid anything with active ingredients (retinol, acids, fragrances) on the treated area for a few days.</p>
-        </div>
-      </div>
-
-      <div class="bg-ivory-dark rounded-2xl p-8 text-center mt-12">
-        <h3 class="font-serif text-2xl text-charcoal mb-3">Ready to Begin Your Journey to Permanent Hair Removal?</h3>
-        <p class="text-warm-gray mb-6">Book your appointment at Shenandoah Electrolysis and take the first step toward permanently smooth skin.</p>
-        <a href="/contact" class="inline-block bg-champagne hover:bg-champagne-light text-charcoal font-medium px-8 py-3 rounded-full transition-colors">Book Your Appointment</a>
-      </div>
-    `,
-  },
 ];
+
 
 export function getAllPosts(): BlogPost[] {
   return blogPosts.sort(

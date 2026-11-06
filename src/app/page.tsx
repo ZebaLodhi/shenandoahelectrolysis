@@ -86,38 +86,25 @@ function HeroSection() {
 function WelcomeSection() {
   return (
     <section className="py-section bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          <div>
-            <div className="w-16 h-px bg-champagne mb-10" />
-            <h2 className="font-serif text-display-sm md:text-display-md text-charcoal mb-8">
-              Welcome to Shenandoah Electrolysis
-            </h2>
-            <p className="text-warm-gray font-sans text-lg leading-relaxed mb-6">
-              At Shenandoah Electrolysis, we believe that every person deserves to
-              feel confident and comfortable in their own skin. Our practice is built
-              on a simple philosophy: permanent results delivered with personalized
-              care, precision, and genuine compassion.
-            </p>
-            <p className="text-warm-gray font-sans text-lg leading-relaxed">
-              Electrolysis is the only FDA-recognized method of permanent hair
-              removal, and we are proud to offer this trusted treatment in a warm,
-              welcoming environment. Whether you are seeking relief from unwanted
-              facial hair, exploring your options for the first time, or continuing
-              your journey toward smoother skin, you will find a dedicated partner in
-              your care here.
-            </p>
-          </div>
-          <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-elegant">
-            <Image
-              src="/images/treatment-room.webp"
-              alt="Shenandoah Electrolysis treatment room with warm ambient lighting"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-        </div>
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-16 h-px bg-champagne mb-10 mx-auto" />
+        <h2 className="font-serif text-display-sm md:text-display-md text-charcoal mb-8">
+          Welcome to Shenandoah Electrolysis
+        </h2>
+        <p className="text-warm-gray font-sans text-lg leading-relaxed mb-6">
+          At Shenandoah Electrolysis, we believe that every person deserves to
+          feel confident and comfortable in their own skin. Our practice is built
+          on a simple philosophy: permanent results delivered with personalized
+          care, precision, and genuine compassion.
+        </p>
+        <p className="text-warm-gray font-sans text-lg leading-relaxed">
+          Electrolysis is the only FDA-recognized method of permanent hair
+          removal, and we are proud to offer this trusted treatment in a warm,
+          welcoming environment. Whether you are seeking relief from unwanted
+          facial hair, exploring your options for the first time, or continuing
+          your journey toward smoother skin, you will find a dedicated partner in
+          your care here.
+        </p>
       </div>
     </section>
   );
