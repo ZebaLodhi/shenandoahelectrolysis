@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #3A3330;
+  background-color: #FDFBF7;
+  font-family: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #E8D5A8;
+  color: #3A3330;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    color: #3A3330;
+  }
+
+  a {
+    transition: color 0.2s ease;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+
+  .prose-custom p {
+    @apply text-warm-gray leading-relaxed text-base sm:text-lg mb-4;
+  }
+
+  .prose-custom h2 {
+    @apply font-serif text-display-sm sm:text-display-md text-charcoal mb-6 mt-10;
+  }
+
+  .prose-custom h3 {
+    @apply font-serif text-2xl sm:text-3xl text-charcoal mb-4 mt-8;
+  }
+
+  .prose-custom ul {
+    @apply list-disc list-inside space-y-2 mb-6 text-warm-gray;
+  }
+
+  .prose-custom ol {
+    @apply list-decimal list-inside space-y-2 mb-6 text-warm-gray;
+  }
+
+  .prose-custom blockquote {
+    @apply border-l-4 border-champagne pl-6 italic text-taupe my-6;
+  }
+
+  .prose-custom a {
+    @apply text-champagne-dark hover:text-champagne underline underline-offset-2;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5
+           bg-champagne text-charcoal font-sans font-medium text-sm tracking-wide uppercase
+           rounded-full transition-all duration-300 ease-out
+           hover:bg-champagne-dark hover:shadow-soft-lg
+           focus:outline-none focus:ring-2 focus:ring-champagne focus:ring-offset-2 focus:ring-offset-ivory;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3.5
+           bg-transparent text-charcoal font-sans font-medium text-sm tracking-wide uppercase
+           border border-charcoal/20 rounded-full transition-all duration-300 ease-out
+           hover:border-charcoal/40 hover:bg-charcoal/5
+           focus:outline-none focus:ring-2 focus:ring-charcoal/20 focus:ring-offset-2 focus:ring-offset-ivory;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center px-6 py-2.5
+           bg-transparent text-charcoal font-sans font-medium text-sm tracking-wide
+           rounded-full transition-all duration-300 ease-out
+           hover:bg-charcoal/5
+           focus:outline-none focus:ring-2 focus:ring-charcoal/10;
+  }
+
+  .card-elevated {
+    @apply bg-white rounded-2xl shadow-soft p-6 sm:p-8
+           transition-all duration-300 ease-out
+           hover:shadow-soft-lg hover:-translate-y-0.5;
+  }
+
+  .divider {
+    @apply w-16 h-px bg-champagne mx-auto;
+  }
+
+  .divider-left {
+    @apply w-16 h-px bg-champagne;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+/* Sticky booking bar */
+.sticky-booking-bar {
+  @apply fixed bottom-0 left-0 right-0 z-40
+         bg-white/95 backdrop-blur-md border-t border-beige/50
+         transform transition-transform duration-500 ease-out;
+}
+
+.sticky-booking-bar.hidden-bar {
+  transform: translateY(100%);
+}
+
+.sticky-booking-bar.visible-bar {
+  transform: translateY(0);
+}
+
+/* Smooth image loading */
+img[data-loaded="false"] {
+  filter: blur(10px);
+  transition: filter 0.3s ease-out;
+}
+
+img[data-loaded="true"] {
+  filter: blur(0);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FDFBF7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4C8B5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B7E74;
+}
