@@ -29,7 +29,7 @@ export default function HeroVideo() {
       {/* Poster image shown while video loads */}
       {!loaded && (
         <Image
-          src="/images/studio-collage.webp"
+          src="/images/treatment-room.webp"
           alt=""
           fill
           className="object-cover"
@@ -47,9 +47,9 @@ export default function HeroVideo() {
         loop
         playsInline
         preload="auto"
-        poster="/images/studio-collage.webp"
+        poster="/images/treatment-room.webp"
       >
-        <source src="/images/hero-video.mp4" type="video/mp4" />
+        <source src="/images/video-intro.mp4" type="video/mp4" />
       </video>
     </>
   );
