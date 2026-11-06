@@ -15,60 +15,64 @@ export const metadata: Metadata = {
 const BOOKING_URL = "#booking";
 
 /* ================================================================== */
-/*  A. HERO SECTION                                                   */
+/*  A. HERO SECTION — Video Background                                */
 /* ================================================================== */
+import HeroVideo from "@/components/features/HeroVideo";
+
 function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-ivory">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/4 -right-1/4 w-[800px] h-[800px] rounded-full bg-sage/5" />
-        <div className="absolute -bottom-1/4 -left-1/4 w-[600px] h-[600px] rounded-full bg-champagne/5" />
-      </div>
+    <section className="relative min-h-screen flex items-end overflow-hidden">
+      {/* Video background */}
+      <HeroVideo />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Text content */}
-          <div className="max-w-xl">
-            <p className="text-champagne font-sans text-sm tracking-[0.2em] uppercase mb-6">
-              Shenandoah Electrolysis
+      {/* Dark gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/40 to-charcoal/20 z-[1]" />
+
+      {/* Content */}
+      <div className="relative z-10 w-full pb-16 sm:pb-20 lg:pb-28 pt-40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="text-champagne font-sans text-xs sm:text-sm tracking-[0.25em] uppercase mb-5">
+              Electrolysis &amp; Skin Studio
             </p>
-            <h1 className="font-serif text-display-lg md:text-display-xl text-charcoal mb-6">
-              Confidence Begins with Permanence.
+            <h1 className="font-serif text-display-lg md:text-display-xl text-ivory mb-5 leading-[1.1]">
+              Permanent results,{" "}
+              <em className="italic text-champagne-light">gently</em> done.
             </h1>
-            <p className="text-warm-gray font-sans text-lg md:text-xl leading-relaxed mb-10">
-              Discover the confidence of permanently smooth skin with
-              professional electrolysis treatments at Shenandoah Electrolysis by
-              Gillian Vickers.
+            <p className="text-ivory/80 font-sans text-base sm:text-lg leading-relaxed mb-8 max-w-lg">
+              Shenandoah Electrolysis is a calm, private studio for the only
+              hair removal method designed to be permanent — on every hair color
+              and every skin tone.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+
+            <div className="flex flex-col sm:flex-row gap-3 mb-12">
               <a
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-charcoal text-ivory font-sans text-sm tracking-wider uppercase rounded-sm hover:bg-deep-brown transition-colors duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 bg-champagne text-charcoal font-sans text-sm font-medium tracking-wider uppercase rounded-sm hover:bg-champagne-light transition-colors duration-300"
               >
-                Book Your Appointment
+                Book a Consultation
               </a>
               <Link
-                href="/education"
-                className="inline-flex items-center justify-center px-8 py-4 border border-charcoal/20 text-charcoal font-sans text-sm tracking-wider uppercase rounded-sm hover:bg-charcoal/5 transition-colors duration-300"
+                href="/services"
+                className="inline-flex items-center justify-center px-8 py-4 border border-ivory/30 text-ivory font-sans text-sm tracking-wider uppercase rounded-sm hover:bg-ivory/10 transition-colors duration-300"
               >
-                Discover Electrolysis
+                How It Works
               </Link>
             </div>
-          </div>
 
-          <div className="relative aspect-[4/5] lg:aspect-[3/4] rounded-2xl overflow-hidden shadow-elegant">
-            <Image
-              src="/images/gillian-vickers.webp"
-              alt="Gillian Vickers, professional electrologist and owner of Shenandoah Electrolysis"
-              fill
-              className="object-cover object-top"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              quality={90}
-              priority
-            />
+            {/* Trust indicators */}
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-ivory/60 font-sans text-xs sm:text-sm tracking-wide">
+              <span className="flex items-center gap-2">
+                <svg className="w-4 h-4 text-champagne/70" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                FDA-Recognized
+              </span>
+              <span className="hidden sm:inline text-ivory/20">|</span>
+              <span>All Skin Tones</span>
+              <span className="hidden sm:inline text-ivory/20">|</span>
+              <span>Private &amp; Personalized</span>
+            </div>
           </div>
         </div>
       </div>

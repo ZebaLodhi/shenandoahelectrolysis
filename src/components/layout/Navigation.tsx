@@ -49,7 +49,10 @@ export default function Navigation() {
                 alt="Shenandoah Electrolysis"
                 width={200}
                 height={60}
-                className="h-10 sm:h-12 w-auto"
+                className={cn(
+                  "h-10 sm:h-12 w-auto transition-all duration-500",
+                  isScrolled || !isHome ? "" : "brightness-0 invert"
+                )}
                 priority
               />
             </Link>
@@ -65,10 +68,10 @@ export default function Navigation() {
                     pathname === link.href
                       ? isScrolled || !isHome
                         ? "text-champagne-dark bg-champagne/10"
-                        : "text-champagne bg-champagne/10"
+                        : "text-champagne-light bg-white/10"
                       : isScrolled || !isHome
                         ? "text-warm-gray hover:text-charcoal hover:bg-charcoal/5"
-                        : "text-warm-gray hover:text-charcoal hover:bg-charcoal/5"
+                        : "text-ivory/80 hover:text-white hover:bg-white/10"
                   )}
                 >
                   {link.label}
@@ -80,7 +83,12 @@ export default function Navigation() {
             <div className="hidden lg:block">
               <Link
                 href={GLOSSGENIUS_BOOKING_URL}
-                className="inline-flex items-center px-6 py-2.5 bg-champagne text-charcoal text-sm font-sans font-medium tracking-wide uppercase rounded-full transition-all duration-300 hover:bg-champagne-dark hover:shadow-soft-lg"
+                className={cn(
+                  "inline-flex items-center px-6 py-2.5 text-sm font-sans font-medium tracking-wide uppercase rounded-full transition-all duration-300",
+                  isScrolled || !isHome
+                    ? "bg-champagne text-charcoal hover:bg-champagne-dark hover:shadow-soft-lg"
+                    : "bg-champagne text-charcoal hover:bg-champagne-light"
+                )}
               >
                 Book Now
               </Link>
@@ -93,7 +101,7 @@ export default function Navigation() {
                 "lg:hidden p-2 rounded-lg transition-colors",
                 isScrolled || !isHome
                   ? "text-charcoal hover:bg-charcoal/5"
-                  : "text-charcoal hover:bg-charcoal/5"
+                  : "text-ivory hover:bg-white/10"
               )}
               aria-label={isMobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileOpen}
