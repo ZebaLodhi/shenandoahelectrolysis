@@ -49,7 +49,7 @@ export default function HeroVideo() {
         preload="auto"
         poster="/images/treatment-room.webp"
       >
-        <source src="/images/video-intro.mp4" type="video/mp4" />
+        <source src="/images/hero-video.mp4" type="video/mp4" />
       </video>
     </>
   );
